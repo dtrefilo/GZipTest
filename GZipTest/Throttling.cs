@@ -18,7 +18,7 @@ namespace GZipTest
 
         public int GetConcurrency()
         {
-            var numAvailableCores = Environment.ProcessorCount;
+            var numAvailableCores = Environment.ProcessorCount * 2;
             return Math.Max(1, Math.Min(numAvailableCores, AppSettings.MaximumConcurrency));
         }
 
